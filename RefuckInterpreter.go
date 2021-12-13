@@ -50,6 +50,7 @@ func (ri *RefuckInterpreter) parse(srcPath string) *list.List {
 			program.PushBack(Token(tokenString))
 		}
 	}
+	checkError(scanner.Err())
 	return program
 }
 
